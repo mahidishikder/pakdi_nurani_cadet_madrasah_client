@@ -5,7 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 
 // Import required modules
-import { EffectCards } from 'swiper/modules';
+import { EffectCards, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 function Card() {
   return (
@@ -13,10 +14,15 @@ function Card() {
       <h2 className="text-4xl font-bold text-center mb-10">Our Students</h2>
 
       <Swiper
-        effect={'cards'}
+        effect={'cards'} // কার্ড ইফেক্ট ব্যবহার করুন
         grabCursor={true}
-        modules={[EffectCards]}
+        modules={[EffectCards, Autoplay]}
         className="mySwiper"
+        autoplay={{
+          delay: 2000, // 2 সেকেন্ড পর পর স্লাইড পরিবর্তন
+          disableOnInteraction: false,
+        }}
+        speed={1500} // স্লাইড পরিবর্তনের গতি (মিলিসেকেন্ডে)
       >
         {/* Slide 1 */}
         <SwiperSlide>
@@ -110,9 +116,9 @@ function Card() {
       </Swiper>
 
       <div className="text-center mt-10">
-        <button className="py-3 px-8 hover:text-white/70 duration-500 bg-[#00A758] text-lg font-semibold">
+        <Link to='/gallery'><button className="py-3 px-12  hover:text-white/70 duration-500 bg-[#00A758] text-lg font-semibold">
           View Gallery
-        </button>
+        </button></Link>
       </div>
     </div>
   );

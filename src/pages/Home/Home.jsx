@@ -1,13 +1,13 @@
 import Banner from "../../conponents/Banner/Banner"
-import Card from "../../conponents/Card/Card"
 import OurService from "../../conponents/OurService.jsx/OurService"
+import Teacher from "../../conponents/Teacher/Teacher"
 
 function Home() {
   return (
     <div>
       <Banner></Banner>
-      <Card></Card>
       <OurService></OurService>
+      <Teacher></Teacher>
 
     </div>
   )

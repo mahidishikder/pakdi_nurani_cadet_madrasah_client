@@ -8,6 +8,8 @@ import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Gallery from "../pages/Gallery/Gallery";
 import Notice from "../pages/Notice/Notice";
+import Routine from "../pages/Routine/Routine";
+import OurTeacher from "../pages/OurTeacher/OurTeacher";
 
 
 
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
     element:<Loyout></Loyout>,
     children: [
       {
-        path:'/home',
+        path:'/',
         element:<Home></Home>
       },
       {
@@ -32,8 +34,16 @@ const router = createBrowserRouter([
         element:<Gallery></Gallery>
       },
       {
+        path:'/teachers',
+        element:<OurTeacher></OurTeacher>
+      },
+      {
         path:'/notice',
         element:<Notice></Notice>
+      },
+      {
+        path:'/routine',
+        element:<Routine></Routine>
       },
       {
         path:'/blog',

@@ -22,12 +22,12 @@ function Navber() {
     <>
       <li>
         <NavLink
-          to="/home"
+          to="/"
           className={({ isActive }) =>
             isActive
-          ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-          : "  px-4 py-2  transition-all duration-300"
-      }
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
         >
           Home
         </NavLink>
@@ -37,41 +37,69 @@ function Navber() {
           to="/our-campuses"
           className={({ isActive }) =>
             isActive
-              ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-              : "  px-4 py-2  transition-all duration-300"
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
           }
         >
           Our Campuses
         </NavLink>
       </li>
       <li>
-      <NavLink
+        <NavLink
           to="/gallery"
           className={({ isActive }) =>
             isActive
-          ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-          : "  px-4 py-2  transition-all duration-300"
-      }
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
         >
           Gallery
         </NavLink>
+      </li>
+      <li>
         <NavLink
-          to="/Notice"
+          to="/teachers"
           className={({ isActive }) =>
             isActive
-          ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-          : "  px-4 py-2  transition-all duration-300"
-      }
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Teachers
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/notice"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
         >
           Notice
         </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/routine"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Routine
+        </NavLink>
+      </li>
+      <li>
         <NavLink
           to="/blog"
           className={({ isActive }) =>
             isActive
-          ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-          : "  px-4 py-2  transition-all duration-300"
-      }
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
         >
           Blog
         </NavLink>
@@ -81,8 +109,8 @@ function Navber() {
           to="/about"
           className={({ isActive }) =>
             isActive
-              ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-              : "  px-4 py-2  transition-all duration-300"
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
           }
         >
           About
@@ -93,8 +121,8 @@ function Navber() {
           to="/contact"
           className={({ isActive }) =>
             isActive
-              ? " underline-offset-8 underline text-[#00A758] px-4 py-2  transition-all duration-300"
-              : "  px-4 py-2  transition-all duration-300"
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
           }
         >
           Contact
@@ -102,6 +130,7 @@ function Navber() {
       </li>
     </>
   );
+  
 
   return (
     <div className="bg-white shadow-sm">
@@ -133,17 +162,17 @@ function Navber() {
             <img
               src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png"
               alt="Social Icon 1"
-              className="w-5 h-5"
+              className="w-5 cursor-pointer h-5"
             />
             <img
               src="https://img.icons8.com/?size=48&id=19318&format=png"
               alt="Social Icon 2"
-              className="w-5 h-5"
+              className="w-5 cursor-pointer h-5"
             />
             <img
               src="https://img.icons8.com/?size=50&id=phOKFKYpe00C&format=png"
               alt="Social Icon 3"
-              className="w-5 h-5"
+              className="w-5 cursor-pointer h-5"
             />
           </div>
          </div>
@@ -158,7 +187,7 @@ function Navber() {
           <div className="navbar-start">
             <div className="flex items-center">
               <img
-                className=""
+                className=" cursor-pointer"
                 src="https://i.ibb.co.com/rRjKJHzh/best-quality.png"
                 alt="Logo"
               />
