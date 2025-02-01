@@ -23,28 +23,122 @@ function Navber() {
 
   const links = (
     <>
-      {["Home", "Our Campuses", "Gallery", "Teachers", "Notice", "Routine", "Blog", "About", "Contact"].map((name, index) => (
-        <li key={index}>
-          <NavLink
-            to={name === "Home" ? "/" : `/${name.toLowerCase().replace(/ /g, "-")}`}
-            className={({ isActive }) =>
-              isActive
-                ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
-                : "px-4 py-2 transition-all duration-300"
-            }
-          >
-            {name}
-          </NavLink>
-        </li>
-      ))}
+      <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/our-campuses"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Our Campuses
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Gallery
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/teachers"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Teachers
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/notice"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Notice
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/routine"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Routine
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? "underline-offset-8 underline text-[#00A758] px-4 py-2 transition-all duration-300"
+              : "px-4 py-2 transition-all duration-300"
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
   );
 
   return (
     <div className="bg-white shadow-sm">
-      <div className="bg-gray-100 py-2">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="lg:flex gap-32">
+      <div className="bg-gray-100 py-2 ">
+        <div className="container mx-auto flex    justify-between items-center">
+          <div className="lg:flex gap-32 space-y-4 lg:space-y-0">
             <div className="flex items-center gap-2">
               <img src="https://img.icons8.com/?size=50&id=9730&format=png" alt="Phone Icon" className="w-5 h-5" />
               <p className="text-sm text-gray-700">01945918448, 0172554415</p>
@@ -54,10 +148,15 @@ function Navber() {
               <h4 className="text-sm text-gray-700">helppnkm@gmail.com</h4>
             </div>
           </div>
-          <div className="lg:flex gap-32">
+          <div className="lg:flex gap-32 space-y-4 lg:space-y-0">
             <div className="gap-1 flex items-center">
               <img className="w-5" src="https://img.icons8.com/?size=50&id=o2FUebZ9P1nM&format=gif" alt="" />
               <p className="text-sm text-gray-700">{currentDate}</p>
+            </div>
+            <div className="flex gap-3">
+              <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" />
+              <img className="w-6 h-6" src="https://img.icons8.com/?size=50&id=phOKFKYpe00C&format=png" alt="" />
+              <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" />
             </div>
           </div>
         </div>
@@ -71,7 +170,7 @@ function Navber() {
             <ul className="flex font-medium">{links}</ul>
           </div>
           <div className="navbar-end">
-            <button className="bg-[#00bf63] py-2 px-4 rounded text-sm font-semibold text-white hover:bg-[#00a758] transition-all duration-300 hidden lg:block">
+            <button className="bg-[#00bf63] py-2 px-6 lg:space-y-0 rounded text-sm font-semibold text-white hover:bg-[#00a758] transition-all duration-300 hidden lg:block">
               Sign Up
             </button>
             <button onClick={toggleMenu} className="lg:hidden btn btn-ghost">

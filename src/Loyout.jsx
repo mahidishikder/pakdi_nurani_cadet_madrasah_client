@@ -4,7 +4,7 @@ import Navber from "./conponents/Navber/Navber"
 
 function Loyout() {
   return (
-    <div className="px-1">
+    <div className="">
     <Navber></Navber>
     <div>
       <Outlet></Outlet>
