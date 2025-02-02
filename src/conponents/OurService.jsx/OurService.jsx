@@ -16,7 +16,7 @@ function OurService() {
           className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
         >
           <source
-            src="https://cdn.pixabay.com/video/2021/09/10/88114-602317841_large.mp4"
+            src="https://cdn.pixabay.com/video/2022/10/28/136789-764976257_tiny.mp4"
             type="video/mp4"
           />
         </video>

@@ -155,7 +155,7 @@ function Navber() {
             </div>
             <div className="flex gap-3">
               <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" />
-              <img className="w-6 h-6" src="https://img.icons8.com/?size=50&id=phOKFKYpe00C&format=png" alt="" />
+              <img className="w-6 h-6 rounded-full" src="https://img.icons8.com/?size=48&id=xWVjuc9hryql&format=gif" alt="" />
               <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" />
             </div>
           </div>

@@ -24,8 +24,13 @@ function Footer() {
           {/* Company Logo & Info */}
         
           <nav>
-          <img src="https://i.ibb.co/rRjKJHzh/best-quality.png" alt="Company Logo" className="w-40 h-auto mb-4 rounded-lg shadow-md" />
-          <p className="text-gray-300">Providing reliable services since 1990</p>
+          <img src="https://i.ibb.co/rRjKJHzh/best-quality.png" alt="Company Logo"  className="w-40 cursor-pointer h-auto mb-4 rounded-lg shadow-md" />
+          <h2 className="text-2xl font-semibold mb-4">Our Social Media</h2>
+          <div className="flex gap-3">
+              <img className="w-9 h-9 cursor-pointer" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" />
+              <img className="w-8 h-8 cursor-pointer rounded-full" src="https://img.icons8.com/?size=48&id=xWVjuc9hryql&format=gif" alt="" />
+              <img className="w-9 h-9 cursor-pointer" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" />
+            </div>
             
           </nav>
 
