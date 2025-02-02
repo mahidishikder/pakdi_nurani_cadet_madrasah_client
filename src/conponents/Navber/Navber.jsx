@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import MarqueeText from "../MarqueeText/MarqueeText";
 
@@ -141,7 +141,7 @@ function Navber() {
           <div className="lg:flex gap-32 space-y-4 lg:space-y-0">
             <div className="flex items-center gap-2">
               <img src="https://img.icons8.com/?size=50&id=9730&format=png" alt="Phone Icon" className="w-5 h-5" />
-              <p className="text-sm text-gray-700">01945918448, 0172554415</p>
+              <p className="text-sm text-gray-700">01945918448, 01931584536</p>
             </div>
             <div className="flex items-center gap-1">
               <img className="w-5" src="https://img.icons8.com/?size=50&id=Ww1lcGqgduif&format=gif" alt="" />
@@ -170,9 +170,9 @@ function Navber() {
             <ul className="flex font-medium">{links}</ul>
           </div>
           <div className="navbar-end">
-            <button className="bg-[#00bf63] py-2 px-6 lg:space-y-0 rounded text-sm font-semibold text-white hover:bg-[#00a758] transition-all duration-300 hidden lg:block">
-              Sign Up
-            </button>
+           <Link to={`signIn`}> <button className="bg-[#00bf63] py-2 px-6 lg:space-y-0 rounded text-sm font-semibold text-white hover:bg-[#00a758] transition-all duration-300 hidden lg:block">
+              Sign in
+            </button></Link>
             <button onClick={toggleMenu} className="lg:hidden btn btn-ghost">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />

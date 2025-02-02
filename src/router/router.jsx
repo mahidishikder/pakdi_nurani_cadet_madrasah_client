@@ -10,6 +10,8 @@ import Gallery from "../pages/Gallery/Gallery";
 import Notice from "../pages/Notice/Notice";
 import Routine from "../pages/Routine/Routine";
 import OurTeacher from "../pages/OurTeacher/OurTeacher";
+import SignUp from "../pages/SignUp/SignUp";
+import SignIn from "../pages/SignIn/SignIn";
 
 
 
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
       {
         path:'/contact',
         element:<Contact></Contact>
+      },
+      {
+        path:'/signUp',
+        element:<SignUp></SignUp>
+      },
+      {
+        path:'/signIn',
+        element:<SignIn></SignIn>
       }
     ]
   }

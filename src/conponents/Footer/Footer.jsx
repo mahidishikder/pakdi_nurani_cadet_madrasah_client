@@ -23,10 +23,11 @@ function Footer() {
         <div className="container mx-auto grid justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
           {/* Company Logo & Info */}
         
-          <nav>
-          <img src="https://i.ibb.co/rRjKJHzh/best-quality.png" alt="Company Logo"  className="w-40 cursor-pointer h-auto mb-4 rounded-lg shadow-md" />
+          <nav className="flex flex-col items-center lg:items-start ">
+          <img  src="https://i.ibb.co.com/h1HgT2cr/Grey-Orange-Modern-Circle-Class-Logo-1.png" alt="Company Logo"  className="w-24 cursor-pointer h-auto mb-4  shadow-md rounded-full" />
+          
           <h2 className="text-2xl font-semibold mb-4">Our Social Media</h2>
-          <div className="flex gap-3">
+          <div className="flex gap-3 ">
               <img className="w-9 h-9 cursor-pointer" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" />
               <img className="w-8 h-8 cursor-pointer rounded-full" src="https://img.icons8.com/?size=48&id=xWVjuc9hryql&format=gif" alt="" />
               <img className="w-9 h-9 cursor-pointer" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" />
