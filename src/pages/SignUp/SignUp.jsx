@@ -1,57 +1,110 @@
-import React from "react";
+import React, { useState } from "react";
+import animationSignUp from "../../assets/login.json";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import SocialLogin from "../../conponents/SocialLogin/SocialLogin";
 
 function SignUp() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedImage(URL.createObjectURL(file));
+    }
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <motion.div 
-        initial={{ opacity: 0, y: -50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 0.5 }}
-        className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+    <div className="relative w-full min-h-screen flex items-center justify-center px-4">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Sign Up</h2>
-        <form className="space-y-4">
-          <div>
-            <label className="block text-gray-600 mb-1" htmlFor="name">Full Name</label>
-            <input 
-              type="text" 
-              id="name" 
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your full name" 
-              required
-            />
+        <source
+          src="https://cdn.pixabay.com/video/2021/09/08/87786-602074234_tiny.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Black Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-slate-900 opacity-50"></div>
+
+      {/* Signup Form */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4 }}
+        className="relative bg-white p-6 rounded-xl shadow-lg w-full max-w-sm text-center backdrop-blur-lg bg-opacity-90"
+      >
+        {/* Animation */}
+        <div className="w-28 mx-auto mb-4">
+          <Lottie animationData={animationSignUp} loop />
+        </div>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">Sign Up</h2>
+
+        <SocialLogin />
+        <div className="divider text-sm text-gray-500">Or continue with</div>
+
+        {/* Profile Picture Upload */}
+        <div className="flex flex-col items-center mb-3">
+          <label className="text-gray-600 text-sm mb-1">Profile Picture</label>
+          <div className="relative w-20 h-20 border-2 border-gray-300 rounded-full overflow-hidden">
+            {selectedImage ? (
+              <img src={selectedImage} alt="Profile" className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
+                <img src="https://cdn-icons-gif.flaticon.com/11186/11186859.gif" alt="Profile Placeholder" />
+              </div>
+            )}
           </div>
-          <div>
-            <label className="block text-gray-600 mb-1" htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your email" 
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-600 mb-1" htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your password" 
-              required
-            />
-          </div>
-          <button 
-            type="submit" 
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="w-full px-3 py-2 mt-2 border cursor-pointer rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+          />
+        </div>
+
+        {/* Input Fields */}
+        <form className="space-y-3">
+          <input
+            type="text"
+            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            placeholder="Password"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-white ring-green-500 ring-1 font-semibold hover:text-white/80 py-2 rounded-md hover:bg-green-600 transition"
           >
             Sign Up
           </button>
         </form>
-        <p className="text-center text-gray-500 mt-4">
-          Already have an account? <Link to={`/signIn`} className="text-blue-500 hover:underline">Sign In</Link>
+
+        <p className="text-sm text-gray-600 mt-3">
+          Already have an account?{" "}
+          <Link to="/signIn" className="text-green-500 hover:underline">
+            Sign In
+          </Link>
         </p>
       </motion.div>
     </div>
