@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import MarqueeText from "../MarqueeText/MarqueeText";
+import { LiaSignOutAltSolid } from "react-icons/lia";
+import { BsPersonAdd } from "react-icons/bs";
+import { FaRegUser } from "react-icons/fa";
 
 function Navber() {
   const [currentDate, setCurrentDate] = useState("");
@@ -186,7 +189,29 @@ function Navber() {
         <button onClick={toggleMenu} className="absolute top-4 right-4 text-gray-600">
           ✖
         </button>
-        <ul className="p-5 space-y-3 font-medium">{links}</ul>
+        <ul className="p-5 space-y-3 font-medium">{links}
+        
+            <div className="divider">social</div>
+            <div className="flex justify-center gap-3">
+              <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=118497&format=png" alt="" />
+              <img className="w-6 h-6 rounded-full" src="https://img.icons8.com/?size=48&id=xWVjuc9hryql&format=gif" alt="" />
+              <img className="w-6 h-6" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="" />
+            </div>
+
+            <div className="divider">with</div>
+        <div className="flex flex-col gap-3">
+        <Link to={`signIn`}> <button className="bg-[#00bf63] flex gap-2 justify-center items-center py-2 px-6 lg:space-y-0 rounded text-sm font-semibold text-white w-full hover:bg-[#00a758] transition-all duration-300 ">
+        <FaRegUser className="text-xl" /> Sign in
+            </button></Link>
+            <Link to={`signUp`}> <button className="ring-1 hover:bg-[#00bf63] ring-[#00bf63] text-black flex gap-2 justify-center items-center py-2 px-6 lg:space-y-0 rounded text-sm font-semibold  w-full  transition-all duration-300 ">
+        <BsPersonAdd className="text-2xl" /> Sign up
+            </button></Link>
+        </div>
+             <button className="bg-red-400 flex gap-2 justify-center items-center my-2 py-2 px-6 lg:space-y-0 rounded text-sm font-semibold text-white w-full hover:bg-[#00a758] transition-all duration-300 ">
+            <LiaSignOutAltSolid className="text-2xl " /> Sign out
+            </button>
+        </ul>
+
       </div>
       <div>
         <MarqueeText></MarqueeText>

@@ -16,7 +16,7 @@ function SignUp() {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center px-4">
+    <div className="relative w-full min-h-screen flex items-center justify-center px-2">
       {/* Background Video */}
       <video
         autoPlay
@@ -40,14 +40,14 @@ function SignUp() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
-        className="relative bg-white p-6 rounded-xl shadow-lg w-full max-w-sm text-center backdrop-blur-lg bg-opacity-90"
+        className="relative bg-white py-6 px-14 rounded-2xl shadow-lg w-full max-w-lg text-center backdrop-blur-lg bg-opacity-90"
       >
         {/* Animation */}
-        <div className="w-28 mx-auto mb-4">
+        <div className="w-42 mx-auto mb-4">
           <Lottie animationData={animationSignUp} loop />
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-800 mb-3">Sign Up</h2>
+        <h2 className="text-3xl  font-bold text-gray-800 mb-5">Sign up  to Pnkm</h2>
 
         <SocialLogin />
         <div className="divider text-sm text-gray-500">Or continue with</div>
@@ -68,7 +68,7 @@ function SignUp() {
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-            className="w-full px-3 py-2 mt-2 border cursor-pointer rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 mt-2 border cursor-pointer rounded-md text-gray-400 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
           />
         </div>
 
@@ -76,19 +76,19 @@ function SignUp() {
         <form className="space-y-3">
           <input
             type="text"
-            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 border rounded-md text-gray-400 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
             placeholder="Full Name"
             required
           />
           <input
             type="email"
-            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 border rounded-md text-gray-400 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
             placeholder="Email"
             required
           />
           <input
             type="password"
-            className="w-full px-3 py-2 border rounded-md text-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
+            className="w-full px-3 py-2 border rounded-md text-gray-400 placeholder-gray-400 focus:ring-2 focus:ring-green-400"
             placeholder="Password"
             required
           />

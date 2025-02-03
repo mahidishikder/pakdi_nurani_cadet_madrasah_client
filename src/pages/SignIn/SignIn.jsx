@@ -7,7 +7,7 @@ import SocialLogin from "../../conponents/SocialLogin/SocialLogin";
 
 function SignIn() {
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="relative px-2 w-full min-h-screen flex items-center justify-center bg-gray-900">
       {/* Background Video */}
       <video
         autoPlay
